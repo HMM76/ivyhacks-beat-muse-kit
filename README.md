@@ -29,7 +29,9 @@ Post `cover.jpg` (1200×1200, the Luma cover) with the plain-text version as the
 ## Files
 
 - `index.html` — the email, both versions, with the Copy button
-- `cover.jpg` — the Luma cover at 1200×1200, served from this repo so it loads in every inbox
+- `hero_banner.jpg` — 1200×700 email header in the Luma cover's style, served from this repo so it loads in every inbox
+- `cover.jpg` — the Luma cover at 1200×1200, for chats and socials
+- `make_assets.py` — regenerates the header if the copy changes
 
 ## Why it is built this way
 
