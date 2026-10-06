@@ -5,18 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>IvyHacks: Beat Muse — email</title>
 <!--
-  SEND KIT — IvyHacks: Beat Muse
-  To send:   click "Copy email", paste into Gmail / Apple Mail / Outlook compose, add subject, send.
-  To re-send: forward the email you received as-is (Gmail keeps the design), or use this page the same way.
-  Rules kept: inline styles only, tables for layout, hosted images, no classes inside the email.
+  SEND KIT — IvyHacks: Beat Muse   (style matched to the Luma cover: black / white / red / acid)
+  To send:    click "Copy email", paste into Gmail / Apple Mail / Outlook, subject below, send.
+  To re-send: forward the email as-is, or open this page and do the same.
+  Rules kept: inline styles only, tables for layout, hosted image, no classes inside the email.
 -->
 <style>
-  html, body { margin: 0; background: #ededf0; }
+  html, body { margin: 0; background: #e9e9ea; }
   .toolbar { position: sticky; top: 0; z-index: 10; display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
     padding: 12px 16px; background: #fff; border-bottom: 1px solid #ddd; font: 13px Arial, Helvetica, sans-serif; color: #333;
     -webkit-user-select: none; user-select: none; }
   .toolbar button { font: inherit; padding: 8px 14px; border: 1px solid #bbb; border-radius: 6px; background: #fff; cursor: pointer; }
-  .toolbar button.primary { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
+  .toolbar button.primary { background: #0b0b0b; color: #d0f030; border-color: #0b0b0b; font-weight: bold; }
   .toolbar button.active { background: #e8e8e8; }
   .toolbar .status { color: #1a7f37; margin-left: auto; }
   .stage { padding: 28px 12px 60px; }
@@ -38,50 +38,58 @@
 
 <!-- ================= DESIGNED EMAIL (everything inline) ================= -->
 <div id="email-designed" contenteditable="true" spellcheck="false" style="outline: none;">
-<table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse: collapse; width: 100%; max-width: 600px; margin: 0 auto; background-color: #ffffff; font-family: Arial, Helvetica, sans-serif; color: rgb(34,34,34);">
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" bgcolor="#0b0b0b" style="border-collapse: collapse; width: 100%; max-width: 600px; margin: 0 auto; background-color: #0b0b0b; font-family: Arial, Helvetica, sans-serif; color: #ffffff;">
 
-  <!-- hero -->
+  <!-- cover -->
   <tr>
-    <td style="padding: 0;">
-      <a href="SIGNUP_URL" style="text-decoration: none;"><img src="https://raw.githubusercontent.com/HMM76/ivyhacks-beat-muse-kit/main/hero_banner.jpg" width="600" alt="IvyHacks: Beat Muse. Build the best realtime AI that runs 24/7. Win $4K." style="display: block; width: 100%; max-width: 600px; height: auto; border: 0;"></a>
+    <td style="padding: 0; background-color: #0b0b0b;">
+      <a href="https://luma.com/d60fjmjy" style="text-decoration: none;"><img src="https://raw.githubusercontent.com/HMM76/ivyhacks-beat-muse-kit/main/cover.jpg" width="600" alt="IvyHacks, University of Pennsylvania. BEAT MUSE. WIN $4K. Oct 10 + 11, 2026." style="display: block; width: 100%; max-width: 600px; height: auto; border: 0;"></a>
     </td>
   </tr>
 
-  <!-- headline + body -->
+  <!-- headline -->
   <tr>
-    <td style="padding: 28px 32px 8px 32px;">
-      <div style="font-family: Arial, Helvetica, sans-serif; font-size: 22px; line-height: 28px; font-weight: bold; color: #111111;">Muse just launched and it's everywhere. You can do better.</div>
-      <div style="font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 23px; color: rgb(34,34,34); padding-top: 12px;">
-        Introducing <b>IvyHacks: Beat Muse</b>. One weekend, one brief: build the best realtime AI that runs 24/7. Tokens and architecture on us. Best build takes <b>$4,000</b>.
+    <td style="padding: 34px 36px 6px 36px; background-color: #0b0b0b;">
+      <div style="font-family: Impact, 'Arial Narrow', 'Helvetica Neue', Arial, sans-serif; font-weight: 900; font-size: 38px; line-height: 40px; letter-spacing: 0.5px; text-transform: uppercase; color: #ffffff;">Muse just launched.</div>
+      <div style="font-family: Impact, 'Arial Narrow', 'Helvetica Neue', Arial, sans-serif; font-weight: 900; font-size: 38px; line-height: 40px; letter-spacing: 0.5px; text-transform: uppercase; color: #d0f030;">You can do better.</div>
+    </td>
+  </tr>
+
+  <!-- body -->
+  <tr>
+    <td style="padding: 16px 36px 8px 36px; background-color: #0b0b0b;">
+      <div style="font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 24px; color: #d9d9d9;">
+        Muse is everywhere, and it has two gaps: people have to download a new app, and it is weak at anything vertical-specific.
+      </div>
+      <div style="font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 24px; color: #ffffff; padding-top: 14px;">
+        <b>IvyHacks: Beat Muse</b> gives you one weekend, the Chert + Brodie SDKs, and tokens on us to build a realtime video AI agent that lives natively on FaceTime. No download. Pick a vertical, beat Muse in it, make it go viral.
       </div>
     </td>
   </tr>
 
-  <!-- details card -->
+  <!-- facts: mono labels, hairlines -->
   <tr>
-    <td style="padding: 16px 32px 8px 32px;">
-      <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse: separate; width: 100%; background-color: #f6f7f9; border: 1px solid #e3e5e8; border-radius: 10px;">
+    <td style="padding: 22px 36px 6px 36px; background-color: #0b0b0b;">
+      <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; width: 100%;">
         <tr>
-          <td style="padding: 14px 18px 4px 18px;">
-            <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; width: 100%;">
-              <tr>
-                <td width="34" style="font-size: 18px; line-height: 26px; padding: 4px 0; vertical-align: top;">🗓</td>
-                <td style="font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 26px; color: rgb(34,34,34); padding: 4px 0;"><b>Sat Oct 10 – Sun Oct 11</b></td>
-              </tr>
-              <tr>
-                <td width="34" style="font-size: 18px; line-height: 26px; padding: 4px 0; vertical-align: top;">📍</td>
-                <td style="font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 26px; color: rgb(34,34,34); padding: 4px 0;">University of Pennsylvania</td>
-              </tr>
-              <tr>
-                <td width="34" style="font-size: 18px; line-height: 26px; padding: 4px 0; vertical-align: top;">🍕</td>
-                <td style="font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 26px; color: rgb(34,34,34); padding: 4px 0;">Free. All meals covered.</td>
-              </tr>
-              <tr>
-                <td width="34" style="font-size: 18px; line-height: 26px; padding: 4px 0 10px 0; vertical-align: top;">🎟</td>
-                <td style="font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 26px; color: rgb(34,34,34); padding: 4px 0 10px 0;">300 spots. <span style="color: #d63030; font-weight: bold;">Almost gone.</span></td>
-              </tr>
-            </table>
-          </td>
+          <td width="86" style="font-family: 'Courier New', Courier, monospace; font-size: 11px; line-height: 18px; letter-spacing: 2px; color: #8c8c8c; padding: 12px 0; border-top: 1px solid #2a2a2a; vertical-align: top;">WHEN</td>
+          <td style="font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 20px; color: #ffffff; padding: 11px 0; border-top: 1px solid #2a2a2a;"><b>Sat Oct 10, 5 PM → Sun Oct 11, 6 PM</b></td>
+        </tr>
+        <tr>
+          <td style="font-family: 'Courier New', Courier, monospace; font-size: 11px; line-height: 18px; letter-spacing: 2px; color: #8c8c8c; padding: 12px 0; border-top: 1px solid #2a2a2a; vertical-align: top;">WHERE</td>
+          <td style="font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 20px; color: #ffffff; padding: 11px 0; border-top: 1px solid #2a2a2a;">University of Pennsylvania, Philadelphia</td>
+        </tr>
+        <tr>
+          <td style="font-family: 'Courier New', Courier, monospace; font-size: 11px; line-height: 18px; letter-spacing: 2px; color: #8c8c8c; padding: 12px 0; border-top: 1px solid #2a2a2a; vertical-align: top;">COST</td>
+          <td style="font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 20px; color: #ffffff; padding: 11px 0; border-top: 1px solid #2a2a2a;">Free. Meals and snacks covered.</td>
+        </tr>
+        <tr>
+          <td style="font-family: 'Courier New', Courier, monospace; font-size: 11px; line-height: 18px; letter-spacing: 2px; color: #8c8c8c; padding: 12px 0; border-top: 1px solid #2a2a2a; vertical-align: top;">PRIZE</td>
+          <td style="font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 20px; color: #ffffff; padding: 11px 0; border-top: 1px solid #2a2a2a;"><span style="color: #d0f030; font-weight: bold;">$4,000</span> + a FaceTime with a real UFC fighter</td>
+        </tr>
+        <tr>
+          <td style="font-family: 'Courier New', Courier, monospace; font-size: 11px; line-height: 18px; letter-spacing: 2px; color: #8c8c8c; padding: 12px 0; border-top: 1px solid #2a2a2a; border-bottom: 1px solid #2a2a2a; vertical-align: top;">SPOTS</td>
+          <td style="font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 20px; color: #ffffff; padding: 11px 0; border-top: 1px solid #2a2a2a; border-bottom: 1px solid #2a2a2a;">300 only. <span style="color: #e02020; font-weight: bold;">Almost gone.</span></td>
         </tr>
       </table>
     </td>
@@ -89,52 +97,61 @@
 
   <!-- CTA -->
   <tr>
-    <td style="padding: 16px 32px 8px 32px;">
+    <td style="padding: 26px 36px 10px 36px; background-color: #0b0b0b;">
       <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse: separate;">
         <tr>
-          <td style="background-color: #d63030; border-radius: 8px;">
-            <a href="SIGNUP_URL" style="display: inline-block; padding: 14px 26px; font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 18px; font-weight: bold; color: #ffffff; text-decoration: none; border-radius: 8px;">Claim a spot →</a>
+          <td bgcolor="#d0f030" style="background-color: #d0f030; border-radius: 4px;">
+            <a href="https://luma.com/d60fjmjy" style="display: inline-block; padding: 15px 30px; font-family: Impact, 'Arial Narrow', 'Helvetica Neue', Arial, sans-serif; font-weight: 900; font-size: 18px; line-height: 20px; letter-spacing: 1px; text-transform: uppercase; color: #0b0b0b; text-decoration: none; border-radius: 4px;">Register on Luma →</a>
           </td>
         </tr>
       </table>
-      <div style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 19px; color: #6b6b73; padding-top: 10px;">Teams of up to 4. Solo is fine. Bring a laptop and a charger.</div>
+      <div style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 19px; color: #8c8c8c; padding-top: 12px;">Teams of up to 4. Solo is fine. Address shows after you register.</div>
     </td>
   </tr>
 
-  <!-- sponsors -->
+  <!-- hosts + sponsors -->
   <tr>
-    <td style="padding: 20px 32px 8px 32px;">
-      <div style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; line-height: 16px; letter-spacing: 1px; color: #8a8a93; text-transform: uppercase;">Sponsored by</div>
-      <div style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 22px; font-weight: bold; color: #111111; padding-top: 4px;">AI@Penn &nbsp;·&nbsp; WUEC &nbsp;·&nbsp; WCA &nbsp;·&nbsp; Chert (YC P26) &nbsp;·&nbsp; Seraphim Labs</div>
+    <td style="padding: 22px 36px 6px 36px; background-color: #0b0b0b;">
+      <div style="font-family: 'Courier New', Courier, monospace; font-size: 11px; line-height: 18px; letter-spacing: 2px; color: #8c8c8c;">HOSTED BY</div>
+      <div style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 22px; font-weight: bold; color: #ffffff; padding: 2px 0 14px 0;">Chert (YC P26) &nbsp;·&nbsp; Brodie by Seraphim Labs &nbsp;·&nbsp; StudySpace</div>
+      <div style="font-family: 'Courier New', Courier, monospace; font-size: 11px; line-height: 18px; letter-spacing: 2px; color: #8c8c8c;">SPONSORED BY</div>
+      <div style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 22px; font-weight: bold; color: #ffffff; padding-top: 2px;">AI @ Penn &nbsp;·&nbsp; WUEC &nbsp;·&nbsp; Wharton China Association</div>
     </td>
   </tr>
 
-  <!-- footer -->
+  <!-- footer strip, like the cover's bottom line -->
   <tr>
-    <td style="padding: 20px 32px 28px 32px; border-top: 1px solid #ececf0;">
-      <div style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 18px; color: #8a8a93;">
-        Know someone at Penn who builds? Forward this. Questions: reply to this email.
-      </div>
+    <td style="padding: 24px 36px 30px 36px; background-color: #0b0b0b;">
+      <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; width: 100%; border-top: 1px solid #2a2a2a;">
+        <tr>
+          <td style="font-family: 'Courier New', Courier, monospace; font-size: 11px; line-height: 18px; letter-spacing: 2px; color: #8c8c8c; padding-top: 14px;">OCT 10 + 11, 2026</td>
+          <td align="right" style="font-family: 'Courier New', Courier, monospace; font-size: 11px; line-height: 18px; letter-spacing: 1px; color: #8c8c8c; padding-top: 14px;"><a href="https://luma.com/d60fjmjy" style="color: #d0f030; text-decoration: none;">luma.com/d60fjmjy</a></td>
+        </tr>
+      </table>
+      <div style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 18px; color: #6f6f6f; padding-top: 16px;">Know someone at Penn who builds? Forward this.</div>
     </td>
   </tr>
 
 </table>
 </div>
 
-<!-- ================= PLAIN TEXT (for listservs that strip HTML) ================= -->
-<pre id="email-plain" class="hidden" contenteditable="true" spellcheck="false">Muse just launched and it's everywhere. You can do better.
+<!-- ================= PLAIN TEXT (listservs that strip HTML) ================= -->
+<pre id="email-plain" class="hidden" contenteditable="true" spellcheck="false">Muse just launched. You can do better.
 
-IvyHacks: Beat Muse
-Build the best realtime AI that runs 24/7. Tokens and architecture on us. Best build wins $4,000.
+Muse is everywhere, and it has two gaps: people have to download a new app, and it is weak at anything vertical-specific.
 
-- Sat Oct 10 – Sun Oct 11
-- University of Pennsylvania
-- Free, all meals covered
-- 300 spots, almost gone
+IvyHacks: Beat Muse gives you one weekend, the Chert + Brodie SDKs, and tokens on us to build a realtime video AI agent that lives natively on FaceTime. No download. Pick a vertical, beat Muse in it, make it go viral.
 
-Claim a spot: SIGNUP_URL
+WHEN   Sat Oct 10, 5 PM – Sun Oct 11, 6 PM
+WHERE  University of Pennsylvania, Philadelphia
+COST   Free. Meals and snacks covered.
+PRIZE  $4,000 + a FaceTime with a real UFC fighter
+SPOTS  300 only. Almost gone.
 
-Sponsored by AI@Penn, WUEC, WCA, Chert (YC P26), Seraphim Labs.
+Register: https://luma.com/d60fjmjy
+
+Hosted by Chert (YC P26), Brodie by Seraphim Labs, and StudySpace.
+Sponsored by AI @ Penn, WUEC, and Wharton China Association.
 
 Know someone at Penn who builds? Forward this.</pre>
 
