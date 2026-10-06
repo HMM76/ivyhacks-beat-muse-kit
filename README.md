@@ -9,7 +9,7 @@ Delete the "Fwd:" header lines if you want it to look native, add one line on to
 
 ## If you want to send it fresh from your own account
 
-1. Open the page: `https://HMM76.github.io/ivyhacks-beat-muse-kit/`
+1. Open the page: https://hmm76.github.io/ivyhacks-beat-muse-kit/
 2. Click **Copy email**.
 3. Paste into a new message in Gmail / Apple Mail / Outlook.
 4. Subject: `Beat Muse. Win $4K. Oct 10–11 at Penn`
