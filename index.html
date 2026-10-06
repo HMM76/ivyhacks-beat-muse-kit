@@ -18,6 +18,7 @@
   .toolbar button { font: inherit; padding: 8px 14px; border: 1px solid #bbb; border-radius: 980px; background: #fff; cursor: pointer; }
   .toolbar button.primary { background: #1d1d1f; color: #fff; border-color: #1d1d1f; }
   .toolbar .status { color: #1a7f37; margin-left: auto; }
+  .toolbar #subject { -webkit-user-select: text; user-select: text; }
   .stage { padding: 28px 12px 60px; }
 </style>
 </head>
@@ -25,7 +26,8 @@
 
 <div class="toolbar">
   <button class="primary" onclick="copyEmail()">Copy email</button>
-  <span>Subject: <b>Beat Muse. Win $4K.</b></span>
+  <button onclick="copySubject()">Copy subject</button>
+  <span>Subject: <b id="subject">Beat Muse. Win $4K.</b></span>
   <span class="status" id="status"></span>
 </div>
 
@@ -144,6 +146,11 @@
   function setStatus(msg) {
     const s = document.getElementById('status'); s.textContent = msg;
     if (msg) setTimeout(() => { if (s.textContent === msg) s.textContent = ''; }, 3000);
+  }
+  async function copySubject() {
+    const t = document.getElementById('subject').textContent;
+    try { await navigator.clipboard.writeText(t); setStatus('Subject copied.'); }
+    catch (e) { setStatus('Copy failed: select the subject text and press Cmd+C'); }
   }
   async function copyEmail() {
     const el = document.getElementById('email-designed');
