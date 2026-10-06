@@ -17,21 +17,15 @@
     -webkit-user-select: none; user-select: none; }
   .toolbar button { font: inherit; padding: 8px 14px; border: 1px solid #bbb; border-radius: 980px; background: #fff; cursor: pointer; }
   .toolbar button.primary { background: #1d1d1f; color: #fff; border-color: #1d1d1f; }
-  .toolbar button.active { background: #e8e8e8; }
   .toolbar .status { color: #1a7f37; margin-left: auto; }
   .stage { padding: 28px 12px 60px; }
-  .hidden { display: none; }
-  pre { max-width: 600px; margin: 0 auto; background: #fff; padding: 24px; white-space: pre-wrap; font: 13px/19.5px Arial, Helvetica, sans-serif; color: rgb(34,34,34); outline: none; }
 </style>
 </head>
 <body>
 
 <div class="toolbar">
-  <button id="tabDesigned" class="active" onclick="showTab('designed')">Designed email</button>
-  <button id="tabPlain" onclick="showTab('plain')">Plain text (listservs)</button>
   <button class="primary" onclick="copyEmail()">Copy email</button>
-  <button id="editBtn" onclick="toggleEdit()">Edit text</button>
-  <span>then paste into Gmail / Apple Mail / Outlook. Subject: <b>Beat Muse. Win $4K. Oct 10–11 at Penn</b></span>
+  <span>Subject: <b>Beat Muse. Win $4K.</b></span>
   <span class="status" id="status"></span>
 </div>
 
@@ -143,60 +137,20 @@
 </table>
 </div>
 
-<!-- ================= PLAIN TEXT (listservs that strip HTML) ================= -->
-<pre id="email-plain" class="hidden" contenteditable="false" spellcheck="false">Muse just launched and it's everywhere. You can do better.
-
-IvyHacks: Beat Muse
-It's simple. Build the best realtime AI that runs 24/7. Tokens and architecture on us. Best build wins $4,000.
-
-- Sat Oct 10 – Sun Oct 11
-- University of Pennsylvania
-- Free, all meals covered
-- 300 spots, almost gone
-
-Register: https://luma.com/d60fjmjy
-
-Sponsored by AI@Penn, WUEC, WCA, Chert (YC P26), Seraphim Labs.
-
-Know someone at Penn who builds? Forward this.</pre>
 
 </div>
 
 <script>
-  let current = 'designed';
-  let editing = false;
-  // Links only follow clicks when the block is NOT editable, so editing is opt-in.
-  function toggleEdit() {
-    editing = !editing;
-    ['email-designed', 'email-plain'].forEach(id => document.getElementById(id).setAttribute('contenteditable', editing ? 'true' : 'false'));
-    const b = document.getElementById('editBtn');
-    b.textContent = editing ? 'Done editing' : 'Edit text';
-    b.classList.toggle('active', editing);
-    setStatus(editing ? 'Click into the email and type. Links are paused while editing.' : '');
-  }
-  function showTab(which) {
-    current = which;
-    document.getElementById('email-designed').classList.toggle('hidden', which !== 'designed');
-    document.getElementById('email-plain').classList.toggle('hidden', which !== 'plain');
-    document.getElementById('tabDesigned').classList.toggle('active', which === 'designed');
-    document.getElementById('tabPlain').classList.toggle('active', which === 'plain');
-    setStatus('');
-  }
   function setStatus(msg) {
     const s = document.getElementById('status'); s.textContent = msg;
     if (msg) setTimeout(() => { if (s.textContent === msg) s.textContent = ''; }, 3000);
   }
   async function copyEmail() {
-    const el = document.getElementById('email-' + current);
+    const el = document.getElementById('email-designed');
+    const clone = el.cloneNode(true);
+    ['contenteditable','spellcheck','id','style'].forEach(a => clone.removeAttribute(a));
+    const html = clone.innerHTML;
     const text = el.innerText;
-    let html;
-    if (current === 'designed') {
-      const clone = el.cloneNode(true);
-      ['contenteditable','spellcheck','id','style'].forEach(a => clone.removeAttribute(a));
-      html = clone.innerHTML;
-    } else {
-      html = '<div style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 19.5px; color: rgb(34,34,34);">' + text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/\n/g,'<br>') + '</div>';
-    }
     try {
       await navigator.clipboard.write([new ClipboardItem({
         'text/html': new Blob([html], { type: 'text/html' }),
